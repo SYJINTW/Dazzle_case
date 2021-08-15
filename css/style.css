@@ -1,0 +1,331 @@
+/*
+
+
+
+ * @colordef #fff;
+ * @colordef #1d3557;
+ * @colordef #eef0ed;
+
+ */
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+    background: #eef0ed; /* Background Color */
+}
+
+.header{
+    height: 100px;
+    background: #1d3557; /* Header Color */
+    padding: 0 20px;
+    color: #fff; /* Header Text Color */
+    position: relative;
+}
+
+.header .logo{
+    line-height: 100px;
+    float: left;
+}
+
+.header .logo img{
+    width: 70px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+}
+
+
+.header .menu{
+    float: right;
+    line-height: 100px;
+}
+
+.header .menu a{
+    color: #fff; /* Icon(Menu) Color */
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.header .show-menu-btn,.hide-menu-btn{
+    transition: 0.4s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.header .show-menu-btn{
+    float: right;
+}
+
+.header .show-menu-btn i{
+    line-height: 100px;
+}
+
+.header .menu a:hover,.show-menu-btn:hover,.hide-menu-btn:hover{
+    color: #a8dadc; /* Header Text Hover Color */
+}
+
+#chk{
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;
+}
+
+@media screen and (max-width:800px){
+    .header .show-menu-btn,.header .hide-menu-btn{
+        display: block;
+    }
+    .header .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #457b9d; /* Small Menu Color */
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 80px 0;
+        line-height: normal;
+        transition: 0.7s;
+    }
+    .header .menu a{
+        display: block;
+        padding: 20px;
+    }
+
+    .header .hide-menu-btn{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    #chk:checked ~ .menu{
+        right:  0;
+    }
+}
+
+/* Content */
+/* Index 主頁 */
+.index-content{
+    padding: 20px;
+    padding-bottom: 140px;
+}
+
+.index-content img{
+    width: 100%;
+    max-width: 950px;
+}
+
+
+/* Page2 公司簡介 */
+.page2-content{
+    padding: 0px 35px;
+    padding-bottom: 140px;
+}
+
+.page2-content h1{
+    max-width: 1200px;
+    padding: 100px 0;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+.page2-content p{
+    max-width: 1200px;
+    padding-bottom: 20px;
+    text-align: left;
+    font-size: 24px;
+}
+
+/* Page3 環境介紹 */
+.page3-content{
+    padding: 20px;
+}
+
+.page3-content .column{
+    float: left;
+    width: 50%;
+}
+
+.page3-content .row::after{
+    display: table;
+    clear: both;
+}
+
+.page3-content p{
+    float: right;
+    max-width: 80%;
+    padding: 20px 40px;
+}
+
+.page3-content .column img{
+    padding: 10px 0;
+    max-width: 90%;
+}
+
+.page3-content .last{
+    padding-bottom: 140px;
+}
+
+@media screen and (max-width: 1000px) {
+    .page3-content .column{
+        float: left;
+        width: 100%;
+    }
+
+    .page3-content p{
+        float: left;
+        max-width: 100%;
+        padding: 20px 0;
+    }
+
+    .page3-content .column img{
+        padding-top: 0px;
+        padding-bottom: 40px;
+        max-width: 100%;
+    }
+
+    .page3-content .last{
+        padding-bottom: 0px;
+    }
+
+    .page3-content .last img{
+        padding-bottom: 140px;
+    }
+
+}
+
+
+
+
+/* Page4 作品集 */
+.page4-content{
+    padding: 20px;
+}
+
+.page4-content .sub-header{
+    height: 70px;
+    background: #457b9d;
+    color: #fff;
+}
+
+.page4-content .sub-menu{
+    line-height: 70px;
+}
+
+.page4-content .sub-menu a{
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.page4-content .sub-menu a:hover{
+    color: #a8dadc;
+}
+
+.page4-content .column{
+    float: left;
+    width: 25%;
+}
+
+.page4-content .row::after{
+    display: table;
+    clear: both;
+}
+
+.page4-content .last4{
+    padding-bottom: 140px;
+}
+
+/* YouTube 縮圖 */
+.page4-content .youtube{
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.page4-content .youtube iframe{
+    width: 320px;
+    height: 180px;
+}
+
+/* 介紹文字 */
+.page4-content .text{
+    text-align: left;
+    width: 320px;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 1360px) {
+    .page4-content .column{
+      width: 50%;
+    }
+    .page4-content .last4{
+        padding-bottom: 0px;
+    }
+    .page4-content .last2{
+        padding-bottom: 140px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .page4-content .column{
+      width: 100%;
+    }
+    .page4-content .last4{
+        padding-bottom: 0px;
+    }
+    .page4-content .last2{
+        padding-bottom: 0px;
+    }
+    .page4-content .last1{
+        padding-bottom: 140px;
+    }
+}
+
+/* Footer */
+.footer{
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 120px;
+    background: #457b9d;
+    color: #fff;
+}
+
+.footer .content{
+    display: flex;
+}
+
+.footer .content .box{
+    padding: 0px 25px;
+}
+
+.footer .content .left{
+    flex-basis: 40%;
+    text-align: right;
+    line-height: 120px;
+}
+
+.footer .content .right{
+    flex-basis: 60%;
+    text-align: left;
+    vertical-align: middle;
+    padding: 20px 0;
+}
+
+.footer .address,.footer .phone,.footer .email{
+    padding: 2px 0;
+    text-align: justify;
+    font-size: 16px;
+}
